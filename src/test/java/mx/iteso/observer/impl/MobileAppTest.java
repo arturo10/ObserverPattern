@@ -36,7 +36,7 @@ public class MobileAppTest {
     @Test
     public void testUnsuscribe() {
         mobileApp.unsuscribe();
-        scoresData.setScore("home","js",2,3,scorers);
+        scoresData.setScore("home","away",2,3,scorers);
         verify(scoresData, times(1)).removeObserver(mobileApp);
     }
 
