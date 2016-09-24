@@ -18,7 +18,5 @@ public class NewsStation {
         mobileApp.unsuscribe();
         scoresData.setScore("Tacit Knowledge", "Intel", 8, 1,scorers);
 
-
-
     }
 }

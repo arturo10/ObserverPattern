@@ -21,16 +21,18 @@ public class StoreMonitorDisplay implements Observer, Displayable {
         this.scorers=new ArrayList<Scorer>();
     }
 
-    public void display() {
-        System.out.println("\n");
-        System.out.println("Monitor is displaying:\n");
-        System.out.println("Latest score is:");
-        System.out.println(homeTeam + " (HOME) " + homeGoals + " - "
-                + awayTeam + " (AWAY) " + awayGoals);
+    public String display() {
+        String print="\n"+"Mobile is displaying: \n"+"Latest score is:"+homeTeam + " (HOME) " + homeGoals + " - "
+                + awayTeam + " (AWAY) " + awayGoals;
+
         for(Scorer scorer: scorers){
-            System.out.print("\nName:"+ scorer.getName()+ " ,Number: "+
-                    String.valueOf(scorer.getNumber())+ " ,Position: "+ scorer.getPosition()+ " ,Team: "+ scorer.getTeam());
+            print+="\nName:"+ scorer.getName()+ ", Number: "+
+                    String.valueOf(scorer.getNumber())+ ", Position: "+ scorer.getPosition()+ " ,Team: "+ scorer.getTeam();
+
         }
+
+        System.out.println(print);
+        return print;
 
     }
 
